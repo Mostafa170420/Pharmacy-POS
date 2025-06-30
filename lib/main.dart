@@ -28,9 +28,7 @@ void main() async {
 
   await Hive.openBox<Invoice>('InvoiceAccepted');
   await Hive.openBox<Invoice>('InvoiceRejected');
-  for (var key in HiveInvoice.invoiceAccepted.keys) {
-    HiveInvoice.invoiceAccepted.delete(key);
-  }
+
   await Supabase.initialize(
     url: "https://xcwispwflhwbpgqtmaaf.supabase.co",
     anonKey:

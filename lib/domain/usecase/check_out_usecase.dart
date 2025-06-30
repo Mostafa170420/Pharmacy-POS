@@ -90,11 +90,10 @@ class CheckOutUsecase {
               ),
               isAccepted: false,
             );
-            return Right(true);
+            return Right(0);
           });
         }
-
-        return Left(Failure("Added in Local"));
+        return Right(0);
       }
     });
   }

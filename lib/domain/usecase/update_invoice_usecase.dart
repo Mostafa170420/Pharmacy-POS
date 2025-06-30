@@ -32,7 +32,6 @@ class UpdateInvoiceUsecase {
               return Right(false);
             }, (sucsses) {
               invoiceRepository.deleteInvoice(invoice.id);
-              invoiceRepository.addInvoice(invoice);
               return Right(true);
             });
           }
